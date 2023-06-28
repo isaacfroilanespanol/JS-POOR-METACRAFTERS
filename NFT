@@ -1,0 +1,31 @@
+let collectionNFT = [];
+
+function mintNFT(companyName, members, groupName, debutYear) {
+  const nft = {
+    companyName: companyName,
+    members: members,
+    groupName: groupName,
+    debutYear: debutYear,
+  };
+  collectionNFT.push(nft);
+}
+
+function listNFTs() {
+  for (let i = 0; i < collectionNFT.length; i++) {
+    console.log(collectionNFT[i]);
+  }
+}
+
+function getTotalSupply() {
+  return collectionNFT.length;
+}
+
+mintNFT("BIGHIT", 7, "BTS", 2013);
+mintNFT("SM", 23, "NCT", 2016);
+mintNFT("JYP", 9, "TWICE", 2015);
+mintNFT("YG", 4, "2NE1", 2009);
+mintNFT("CUBE", 5, "GIDLE", 2018);
+
+listNFTs();
+
+console.log("TOTAL NFT:", getTotalSupply());
